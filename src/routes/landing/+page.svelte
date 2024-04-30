@@ -3,7 +3,7 @@
 		window.location.href = '/login';
 	};
 
-	import logo from '/Users/aa/Desktop/lektion4/logo1.png';
+	import logo from './logo1.png';
 
 </script>
 
