@@ -3,7 +3,7 @@
 		window.location.href = '/login';
 	};
 
-	import logo from './logo1.png';
+	import logo from '../../../logo1.png';
 
 </script>
 
@@ -15,7 +15,7 @@
 		margin-top: 100px;
 		margin-left: 20px; 
 	}
-
+	
 	h2 {
 		color: #00BFFF;
 		margin-top: 20px; 

@@ -3,7 +3,7 @@ const goToOpg1 = async () => {
 		window.location.href = '/opgave1';
 	};
 
-    import logo from './logo2.png';
+    import logo from '../../../logo1.png';
 	
 </script>
 
