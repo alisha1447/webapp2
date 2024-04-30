@@ -26,3 +26,11 @@ model Dairy {
   authorId  String
   author    User     @relation(fields: [authorId], references: [id])
 }
+
+model Answer {
+  id        String   @id @default(cuid())
+  opgaveId  String
+  authorId  String
+  questionno Int
+  answer    String
+}

@@ -11,6 +11,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.2.0",
+		"@sveltejs/enhanced-img": "^0.2.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "^8.56.0",
@@ -27,6 +28,7 @@
 	"dependencies": {
 		"@prisma/client": "^5.12.1",
 		"@sveltestrap/sveltestrap": "^6.2.7",
+		"@vercel/blob": "^0.23.2",
 		"bcryptjs": "^2.4.3",
 		"jsonwebtoken": "^9.0.2"
 	}
