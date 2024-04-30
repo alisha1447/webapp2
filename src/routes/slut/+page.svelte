@@ -5,7 +5,7 @@
         window.location.href = '/landing';
     };
 
-    import logo from '/Users/aa/Desktop/logo3.png';
+    import logo from '/Users/aa/Desktop/lektion4/logo3.png';
 
     let latestAnswers = [];
 
