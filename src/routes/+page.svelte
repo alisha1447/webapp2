@@ -1,42 +1,53 @@
 <script>
-	const goToStart = async () => {
-		window.location.href = '/login';
+	import { Container, Row, Col, Input, Button } from '@sveltestrap/sveltestrap';
+
+	const md = { size: 4, offset: 4 };
+	const sm = { size: 6, offset: 3 };
+
+	let username = '';
+	let password = '';
+
+	const login = async () => {
+		const response = await fetch('/api/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ username, password })
+		});
+		const result = await response.text();
+		if (response.status === 200) {
+			window.location = '/landing';
+		} else {
+			alert('Forkert brugernavn eller password');
+		}
 	};
-
-	import logo from '../../../logo1.png';
-
 </script>
 
-<style>
-	
-	.logo-img {
-		width: 500px; 
-		height: auto; 
-		margin-top: 100px;
-		margin-left: 20px; 
-	}
-	
-	h2 {
-		color: #00BFFF;
-		margin-top: 20px; 
-		margin-bottom: 20px; 
-		font-weight: bold; 
-		margin-left: 20px; 
-	}
-
-	button {
-		margin-top: 0px; 
-		margin-left: 20px; 
-	}
-</style>
-
-<div class="container">
-	<img alt="The project logo" src={logo} class="logo-img"/>
-	<div>
-		<h2>
-			Din dedikerede følgesvend på vejen mod genoptræning og styrke efter apopleksi
-		</h2>
-		<button on:click={goToStart}>Tryk her for at starte</button>
-	</div>
-</div>
-
+<Container>
+	<Row>
+		<h1>Login</h1>
+	</Row>
+	<Row>
+		<Col {sm} {md}>
+			<Input bind:value={username} type="text" placeholder="Indtast Brugernavn" />
+		</Col>
+	</Row>
+	<Row>
+		<Col {sm} {md}>
+			<Input bind:value={password} type="password" placeholder="Indtast Password" />
+		</Col>
+	</Row>
+	<Row>
+		<Col {sm} {md}>
+			<Button color="primary" on:click={login}>Login</Button>
+		</Col>
+	</Row>
+	<Row>
+		<Col {sm} {md}>
+			<p>
+				<a href="/admin">Gå til admin</a>
+			</p>
+		</Col>
+	</Row>
+</Container>
