@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
 
     const goToLogin = async () => {
-        window.location.href = '/landing';
+        window.location.href = '/';
     };
 
     import logo from '../../../logo1.png';
