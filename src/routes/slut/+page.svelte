@@ -5,7 +5,7 @@
         window.location.href = '/';
     };
 
-    import logo from '../../../logo1.png';
+    import logo from '../logo3.png';
 
     let latestAnswers = [];
 

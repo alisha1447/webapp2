@@ -3,7 +3,7 @@
 		window.location.href = '/start';
 	};
 
-	import logo from '../../../logo1.png';
+	import logo from '../logo1.png';
 
 </script>
 
