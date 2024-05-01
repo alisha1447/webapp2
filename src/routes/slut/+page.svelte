@@ -13,7 +13,7 @@
         const response = await fetch("/api/opgave1");
         if (response.ok) {
             latestAnswers = await response.json();
-            latestAnswers.reverse(); // Reversing the order of answers
+            latestAnswers.reverse();
         }
     });
 </script>
